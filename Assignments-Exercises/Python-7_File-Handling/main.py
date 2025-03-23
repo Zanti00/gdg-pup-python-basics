@@ -1,4 +1,4 @@
-# Step 1: Read contents from a file
+# read sample.txt's content and print it
 try:
     with open('sample.txt', 'r') as file:
         contents = file.read()
@@ -7,12 +7,16 @@ try:
 except FileNotFoundError:
     print("The file 'sample.txt' was not found.")
 
-# Step 2: Write to a new file
+# create/write a new file
 with open('newfile.txt', 'w') as file:
-    file.write("This is a new file, like New Year New Me XD.\n")
-    print("\nNew file created with content:")
+    file.write("This is a new file")
+    print("\nNew file created")
 
-# Step 3: Verify content in the new file by reading it
+# print the content of the newly created text file
 with open('newfile.txt', 'r') as file:
-    newfile_contents = file.read()
-    print(newfile_contents)
+    contents = file.read()
+    print("\nContents of the new file:")
+    print(contents)
+
+# closes the file to ensure resources are freed up
+file.close()

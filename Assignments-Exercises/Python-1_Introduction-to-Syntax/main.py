@@ -1,8 +1,8 @@
 # This program explores Python syntax, variables, data types, and basic operators.
 
 # 1. Declare variables of different types
-name = "Sparky"  # string
-age = 25        # integer
+name = "Camar"  # string
+age = 21        # integer
 height = 5.6     # float
 is_student = True  # boolean
 

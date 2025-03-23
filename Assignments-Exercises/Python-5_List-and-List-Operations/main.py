@@ -1,17 +1,26 @@
-# Step 1: Create a list of integers
-my_list = [5, 3, 8, 1]
-print("Original list:", my_list)
+# initialized a list
+example_list = [5, 3, 8, 1]
 
-# Step 2: Add an element to the list
-my_list.append(6)
-print("List after adding an element:", my_list)
+print("Original list:", example_list)
 
-# Step 3: Remove an element from the list
-my_list.remove(8)
-print("List after removing an element:", my_list)
+try:
+    num = int(input("Enter a number to add: "))
+    # add number to the end of the list
+    example_list.append(num)
 
-# Step 4: Sort the list in ascending order
-my_list.sort()
-print("List after sorting:", my_list)
+    print(f"Added {num} to the list:", example_list)
 
+    num = int(input("Enter a number to remove: "))
+    # remove number from the list
+    if num in example_list:
+        example_list.remove(num)
+        print(f"Removed {num} from the list:", example_list)
+    else:
+        print("The number is not in the list.")
 
+    # sort the list in ascending order
+    example_list.sort()
+
+    print("Sorted list:", example_list)
+except ValueError:
+    print("Please enter a valid number.")

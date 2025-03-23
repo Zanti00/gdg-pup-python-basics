@@ -1,15 +1,31 @@
-# Step 1: Create a dictionary
-my_dict = {'name': 'Sparky', 'age': 25}
-print("Original dictionary:", my_dict)
+# initialize dictionary
+dict = {'name': 'John', 'age': 22}
 
-# Step 2: Add a new key-value pair
-my_dict['city'] = 'New York'
-print("Dictionary after adding an item:", my_dict)
+print("Original dictionary values: ", dict)
 
-# Step 3: Update an existing key-value pair
-my_dict['age'] = 26
-print("Dictionary after updating an item:", my_dict)
+print("\nAdd new key-value pair to the dictionary\n")
 
-# Step 4: Remove a key-value pair
-del my_dict['age']
-print("Dictionary after removing an item:", my_dict)
+# handles exception if invalid input is entered
+try:
+    # add new key-value pair to the dictionary
+    key = input("Enter the new key: ")
+    value = input("Enter the new value: ")
+    dict[key] = value
+    print("Updated dictionary values: ", dict)
+
+    print("\nUpdate a key-value pair in the dictionary\n")
+
+    # update a key-value pair in the dictionary
+    key = input("Enter the key to update: ")
+    value = input("Enter the new value: ")
+    dict[key] = value
+    print("Updated dictionary values: ", dict)
+
+    print("\nDelete a key-value pair in the dictionary\n")
+
+    # delete a key-value pair in the dictionary
+    key = input("Enter the key to delete: ")
+    del dict[key]
+    print("Updated dictionary values: ", dict)
+except:
+    print("Invalid input")
